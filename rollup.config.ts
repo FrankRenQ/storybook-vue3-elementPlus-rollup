@@ -11,6 +11,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import postcss from 'rollup-plugin-postcss'
 import babel from '@rollup/plugin-babel'
 import vue from 'rollup-plugin-vue'
+import { terser } from 'rollup-plugin-terser'
 
 export default defineConfig([
     {
@@ -32,6 +33,12 @@ export default defineConfig([
             babel({
                 babelHelpers: 'bundled',
                 extensions: ['.js', '.vue']
+            }),
+            terser({
+                output: {
+                    ecma: 5,
+                },
+                compress: true
             })
         ]
     }
