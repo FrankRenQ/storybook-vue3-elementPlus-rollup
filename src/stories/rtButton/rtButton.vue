@@ -9,23 +9,6 @@
 import {computed} from "vue";
 
 import {ButtonSizeEnum} from "./rtButtonTypes";
-interface User {
-    name: string
-}
-interface User {
-    age: number,
-    sex: string
-}
-
-const user: User = {
-    name: 'name',
-    age: 18,
-    sex: 'women'
-}
-
-let div = document.createElement('div');
-type B = typeof div
-
 
 interface PropsOpt {
     label: string;
